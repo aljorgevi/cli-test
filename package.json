@@ -1,24 +1,24 @@
 {
-  "name": "firequiz",
-  "version": "0.0.4",
-  "description": "Who wants to be a JavaScript millionaire?",
-  "homepage": "https://fireship.io",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fireship-io/javascript-millionaire"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node ."
-  },
-  "bin": "./index.js",
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "chalk-animation": "^1.6.0",
-    "figlet": "^1.5.2",
-    "gradient-string": "^2.0.0",
-    "inquirer": "^8.2.0",
-    "nanospinner": "^1.0.0"
-  }
+	"name": "trac-loading",
+	"version": "0.0.4",
+	"description": "Who wants to be a JavaScript millionaire?",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"docker:build": "docker build -t trac-loading .",
+		"docker:run": "docker run -it trac-loading",
+		"docker:start": "docker start -a -i $(docker ps -a -q --filter ancestor=trac-loading --format={{.ID}})",
+		"docker:stop": "docker stop $(docker ps -a -q --filter ancestor=trac-loading --format={{.ID}})",
+		"docker:remove": "docker rmi $(docker images -q trac-loading)"
+	},
+	"bin": "./index.js",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"chalk-animation": "^1.6.0",
+		"figlet": "^1.5.2",
+		"gradient-string": "^2.0.0",
+		"inquirer": "^8.2.0",
+		"nanospinner": "^1.0.0"
+	}
 }

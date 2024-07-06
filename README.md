@@ -1,27 +1,21 @@
-# JavaScript Millionaire CLI Tool
+# Trac loading CLI
 
-A super fancy CLI tool. 
+This is a CLI for loading data into the Trac database.
 
-Watch the full [Node.js CLI Tutorial](https://youtu.be/_oHByo8tiEY) video on YouTube. 
+## Commands
 
+| Command            | Description                            |
+| ------------------ | -------------------------------------- |
+| `npm install`      | Install the CLI dependencies.          |
+| `npm docker:build` | create an image with trac-loading name |
+| `npm docker:start` | run the image in it mode               |
+| `npm run build`    | Build the CLI for production.          |
 
+## other docker commands
 
-## Take the Quiz
-
-```
-npx firequiz
-```
-
-## Packages Used
-
-[chalk](https://github.com/chalk/chalk) | 
-[inquirer](https://github.com/SBoudrias/Inquirer.js) |
-[gradient-string](https://github.com/bokub/gradient-string) |
-[chalk-animation](https://github.com/bokub/chalk-animation) |
-[figlet](https://github.com/patorjk/figlet.js) |
-[nanospinner](https://github.com/usmanyunusov/nanospinner)
-
-
-```sh
-npm i chalk chalk-animation figlet gradient-string inquirer nanospinner
-```
+| Command                          | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `docker run -it <image>`         | create new container from image container & run cli. |
+| `docker start -a -i <container>` | re-start a container                                 |
+| `npm test`                       | Run the test suite.                                  |
+| `npm run build`                  | Build the CLI for production.                        |
