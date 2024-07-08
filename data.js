@@ -17,7 +17,7 @@ async function welcome() {
 
 	console.log(`
     ${chalk.bgBlue('HOW TO USE')}
-    You can load all the local setup initial data at once, or choose from the menu to load specific data sets.
+    Load data, models, flows, control tables, singletons, policy, run jobs and more.
   `)
 }
 
@@ -55,14 +55,14 @@ async function mainMenu() {
 		{
 			type: 'list',
 			name: 'loadOption',
-			message: 'Do you want to load all data or load data by menu?',
-			choices: ['Load all data', 'Load data by menu', 'Exit']
+			message: 'What do you want to do?',
+			choices: ['init local data', 'data', 'models', 'flow', 'run a job', 'Exit']
 		}
 	])
 
-	if (answers.loadOption === 'Load all data') {
+	if (answers.loadOption === 'init local data') {
 		await loadAllData()
-	} else if (answers.loadOption === 'Load data by menu') {
+	} else if (answers.loadOption === 'data') {
 		await loadDataMenu()
 	} else {
 		process.exit(0)
